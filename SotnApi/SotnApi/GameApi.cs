@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml.Linq;
 using BizHawk.Client.Common;
 using SotnApi.Constants.Addresses;
 using SotnApi.Constants.Addresses.Alucard;
@@ -362,6 +363,14 @@ namespace SotnApi
             }
         }
 
+        public bool AllBossesGoal
+        {
+            get
+            {
+                return (memAPI.ReadByte(Game.RandoGoal) & 1) > 0;
+            }
+        }
+
         public bool EquipMenuOpen()
         {
             return memAPI.ReadByte(Game.EquipMenuOpen) > 0 && CurrentMainMenuCategory == MainMenuCategory.Equip;
@@ -404,13 +413,9 @@ namespace SotnApi
             memAPI.WriteByteRange(Game.MapItemsCollectedStart, bytes);
         }
 
-        public uint GetTimeAttack(string name)
+        public uint GetTimeAttack(Times time)
         {
-            if (TimeAttack.Times.ContainsKey(name.ToLower().Trim()))
-            {
-                return memAPI.ReadU32(TimeAttack.Times[name]);
-            }
-            return 0;
+            return memAPI.ReadU32(TimeAttack.Times[(int)time]);
         }
 
         public bool InAlucardMode()
@@ -434,7 +439,7 @@ namespace SotnApi
             uint currentRoomXPos = RoomX;
             uint currentRoomYPos = RoomY;
             uint maxHp = memAPI.ReadU32(Stats.MaxHP);
-            uint timeAttackPrologue = GetTimeAttack("draculaprologue");
+            uint timeAttackPrologue = GetTimeAttack(Times.DraculaPrologue);
             bool inGame = this.Status == SotnApi.Constants.Values.Game.Status.InGame;
             bool isAlucard = this.CurrentCharacter == Character.Alucard;
 
@@ -597,6 +602,7 @@ namespace SotnApi
             Match match = Regex.Match(preset, pattern, RegexOptions.IgnoreCase);
             return match.Value.Trim();
         }
+
 
         private string ReadString(long address)
         {

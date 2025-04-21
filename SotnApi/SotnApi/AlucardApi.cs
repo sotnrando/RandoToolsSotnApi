@@ -1256,12 +1256,12 @@ namespace SotnApi
 
         public bool HasRelic(Relic relic)
         {
-            return memAPI.ReadByte(Relics.AllRelics[relic.ToString()]) > 0;
+            return memAPI.ReadByte(Relics.AllRelics[(int)relic]) > 0;
         }
 
         public void TakeRelic(Relic relic)
         {
-            memAPI.WriteByte(Relics.AllRelics[relic.ToString()], 0);
+            memAPI.WriteByte(Relics.AllRelics[(int)relic], 0);
         }
 
         public void GrantRelic(Relic relic, bool allowSpawn = false)
@@ -1282,7 +1282,7 @@ namespace SotnApi
             {
                 value = relicOn;
             }
-            memAPI.WriteByte(Relics.AllRelics[relic.ToString()], value);
+            memAPI.WriteByte(Relics.AllRelics[(int)relic], value);
         }
 
         public void GrantFirstCastleWarp(Warp warp)

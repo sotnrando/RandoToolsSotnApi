@@ -115,6 +115,10 @@ namespace SotnApi.Interfaces
         /// Counter for the QCF input sequence
         /// </summary>
         ushort QcfInputCounter { get; }
+        /// <returns>
+        /// Randomizer all bosses goal.
+        /// </returns>
+        bool AllBossesGoal { get; }
         /// <summary>
         /// Checks if the item equip menu is currently open.
         /// </summary>
@@ -154,7 +158,7 @@ namespace SotnApi.Interfaces
         /// <returns>
         /// The value of the time attack for the provided activity.
         /// </returns>
-        uint GetTimeAttack(string name);
+        uint GetTimeAttack(Times time);
         /// <summary>
         /// Checks if the game is in Alucard mode.
         /// </summary>

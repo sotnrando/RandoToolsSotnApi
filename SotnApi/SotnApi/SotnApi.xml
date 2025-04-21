@@ -371,6 +371,11 @@
             Counter for the QCF input sequence
             </summary>
         </member>
+        <member name="P:SotnApi.Interfaces.IGameApi.AllBossesGoal">
+            <returns>
+            Randomizer all bosses goal.
+            </returns>
+        </member>
         <member name="M:SotnApi.Interfaces.IGameApi.EquipMenuOpen">
             <summary>
             Checks if the item equip menu is currently open.
@@ -416,7 +421,7 @@
             Sets the value for a room on the map. It will not reflect on the map unless a map reload occurs. Library cards and castle switches reload the map.
             </summary>
         </member>
-        <member name="M:SotnApi.Interfaces.IGameApi.GetTimeAttack(System.String)">
+        <member name="M:SotnApi.Interfaces.IGameApi.GetTimeAttack(SotnApi.Constants.Values.Game.Enums.Times)">
             <returns>
             The value of the time attack for the provided activity.
             </returns>

@@ -32,7 +32,7 @@ namespace SotnApi.Constants.Addresses
         public const long MeetLibrarian = 0x03CA8C;
         public const long MeetMaria = 0x03CA90;
 
-        public static readonly Dictionary<string, long> Times = new Dictionary<string, long>
+        public static readonly Dictionary<string, long> TimesDictionary = new Dictionary<string, long>
         {
             {"draculaprologue", 0x03ca28 },
             {"olrox",  0x03ca2c },
@@ -62,6 +62,37 @@ namespace SotnApi.Constants.Addresses
             {"meetlibrarian",  0x03ca8c },
             {"meetmaria", 0x03ca90 }
 
+        };
+
+        public static readonly long[] Times = new long[]
+        {
+            0x03ca28,
+            0x03ca2c,
+            0x03ca30,
+            0x03ca34,
+            0x03ca38,
+            0x03ca3c,
+            0x03ca40,
+            0x03ca44,
+            0x03ca48,
+            0x03ca4c,
+            0x03ca50,
+            0x03ca54,
+            0x03ca58,
+            0x03ca5c,
+            0x03ca60,
+            0x03ca64,
+            0x03ca68,
+            0x03ca6c,
+            0x03ca70,
+            0x03ca74,
+            0x03ca78,
+            0x03ca7c,
+            0x03ca80,
+            0x03ca84,
+            0x03ca88,
+            0x03ca8c,
+            0x03ca90
         };
     }
 }

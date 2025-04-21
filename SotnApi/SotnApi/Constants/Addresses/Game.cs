@@ -106,6 +106,7 @@ namespace SotnApi.Constants.Addresses
         public const long VramMapStart = 0x089E80;
         public const long SeedStart = 0x1A78B4;
         public const long PresetStart = 0x1A78D4;
+        public const long RandoGoal = 0x0988B0;
         public const long MapStart = 0x06BB74;
         public const long MapEnd = 0x06C374;
         public const long CanSave = 0x03C708;

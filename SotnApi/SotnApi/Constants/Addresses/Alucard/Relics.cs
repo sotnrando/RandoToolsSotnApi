@@ -4,7 +4,7 @@ namespace SotnApi.Constants.Addresses.Alucard
 {
     public static class Relics
     {
-        public static readonly Dictionary<string, long> AllRelics = new Dictionary<string, long>
+        public static readonly Dictionary<string, long> AllRelicsDictionary = new Dictionary<string, long>
         {
            { "SoulOfBat", 0x97964 },
            { "FireOfBat", 0x97965 },
@@ -36,6 +36,40 @@ namespace SotnApi.Constants.Addresses.Alucard
            { "RibOfVlad", 0x9797F },
            { "RingOfVlad", 0x97980 },
            { "EyeOfVlad",  0x97981 }
+        };
+
+        public static readonly long[] AllRelics = new long[]
+        {
+           0x97964,
+           0x97965,
+           0x97966,
+           0x97967,
+           0x97968,
+           0x97969,
+           0x9796A,
+           0x9796B,
+           0x9796C,
+           0x9796D,
+           0x9796E,
+           0x9796F,
+           0x97970,
+           0x97971,
+           0x97972,
+           0x97973,
+           0x97974,
+           0x97975,
+           0x97976,
+           0x97977,
+           0x97978,
+           0x97979,
+           0x9797A,
+           0x9797B,
+           0x9797C,
+           0x9797D,
+           0x9797E,
+           0x9797F,
+           0x97980,
+           0x97981
         };
 
         public const long SoulOfBat = 0x97964;
