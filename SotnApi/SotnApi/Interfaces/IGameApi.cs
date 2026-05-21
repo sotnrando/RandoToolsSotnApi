@@ -98,6 +98,8 @@ namespace SotnApi.Interfaces
         /// <returns>
         /// Index of the current music track. Would need to be frozen to get set.
         /// </returns>
+        byte Transition { get; }
+        byte PresetByte { get; }
         uint MusicTrack { get; }
         /// <summary>
         /// Gets or sets the default volume for the current track.

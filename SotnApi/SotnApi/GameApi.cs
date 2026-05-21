@@ -15,7 +15,7 @@ namespace SotnApi
 {
     public sealed class GameApi : IGameApi
     {
-        private const int MaxStringLenght = 31;
+        private const int MaxStringLenght = 60;
         private readonly IMemoryApi memAPI;
         public GameApi(IMemoryApi? memAPI)
         {
@@ -172,6 +172,7 @@ namespace SotnApi
                 return (MainMenuCategory)memAPI.ReadByte(Game.MainMenuCategory);
             }
         }
+        
 
         public Character CurrentCharacter
         {
@@ -320,6 +321,23 @@ namespace SotnApi
             get
             {
                 return memAPI.ReadByte(Game.Transition) == SotnApi.Constants.Values.Game.Status.Transition;
+            }
+        }
+
+        public byte Transition
+        {
+            get
+            {
+                return (byte)memAPI.ReadByte(Game.Transition);
+            }
+        }
+
+        /// <inheritdoc/>
+        public byte PresetByte
+        {
+            get
+            {
+                return (byte)memAPI.ReadByte(0x09A0B0);
             }
         }
 
@@ -598,7 +616,7 @@ namespace SotnApi
         public string ReadPresetName()
         {
             string preset = ReadString(Game.PresetStart).Trim();
-            string pattern = @" ([a-z.-]{2,15})( ){0,1}";
+            string pattern = @" ([a-z0-9.-]{2,50})( ){0,1}";
             Match match = Regex.Match(preset, pattern, RegexOptions.IgnoreCase);
             return match.Value.Trim();
         }

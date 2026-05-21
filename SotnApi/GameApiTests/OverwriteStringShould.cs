@@ -9,7 +9,7 @@ namespace GameApiTests
 {
     public class OverwriteStringShould
     {
-        private const int MaxStringLenght = 31;
+        private const int MaxStringLenght = 50;
         [Fact]
         public void ThrowArgumentNullException_WhenTextIsNull()
         {

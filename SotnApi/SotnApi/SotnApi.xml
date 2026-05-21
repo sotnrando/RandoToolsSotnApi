@@ -15,6 +15,9 @@
             The address where the slot starts. Or 0 if a free slot was not found.
             </returns>
         </member>
+        <member name="P:SotnApi.GameApi.PresetByte">
+            <inheritdoc/>
+        </member>
         <member name="M:SotnApi.GameApi.SetLibraryCardDestination(System.UInt32,System.Int32,System.Int32,System.UInt32)">
             <summary>
             Room is an index that goes in increments of 8. Setting XY outside of the room will cause a large amount of delay before gaining control.
@@ -346,7 +349,7 @@
             True of the game is in the process of loading a new screen.
             </returns>
         </member>
-        <member name="P:SotnApi.Interfaces.IGameApi.MusicTrack">
+        <member name="P:SotnApi.Interfaces.IGameApi.Transition">
             <returns>
             Index of the current music track. Would need to be frozen to get set.
             </returns>
