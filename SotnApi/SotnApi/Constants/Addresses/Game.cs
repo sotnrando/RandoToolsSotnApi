@@ -129,5 +129,6 @@ namespace SotnApi.Constants.Addresses
         public const long LibraryCardDestinationRoom = 0x0A25E6; //base 8
         public const long StopwatchTimerInstruction = 0x012aad8;
         public const long StopwatchTImerValue = 0x12AAD8;
+        public const long SaveFileName = 0x097B90;  // 8 bytes
     }
 }

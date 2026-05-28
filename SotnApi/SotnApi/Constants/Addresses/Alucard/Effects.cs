@@ -16,5 +16,16 @@
         public const long BombDamageInterval = 0x07409D;
         public const long BombDamagesNeutral = 0x0740BE;
         public const long VisualEffectPalette = 0x072F60;
+        // Palette & Liner Colors
+        public const long PaletteMain1 = 0x0DB20A;
+        public const long PaletteMain2 = 0x0DB20C;
+        public const long PaletteMain3 = 0x0DB20E;
+        public const long PaletteMain4 = 0x0DB210;
+        public const long PaletteMain5 = 0x0DB212;
+        public const long PaletteDark = 0x0DB1F6;
+        public const long Liner1 = 0x0DB1F8;
+        public const long Liner2 = 0x0DB1FA;
+        public const long Liner3 = 0x0DB1FC;
+        public const long Liner4 = 0x0DB1FE;
     }
 }

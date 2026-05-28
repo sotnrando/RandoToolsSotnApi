@@ -1474,5 +1474,25 @@ namespace SotnApi
             return Equipment.Items[i] != "empty hand" && Equipment.Items[i] != "----helm" && Equipment.Items[i] != "----armor"
                                 && Equipment.Items[i] != "----cloak" && Equipment.Items[i] != "----accessory";
         }
+
+        public void SetAlucardPalette(uint[] paletteColors, uint darkColor)
+        {
+            if (paletteColors.Length != 5) return;
+            memAPI.WriteU16(Effects.PaletteMain1, paletteColors[0]);
+            memAPI.WriteU16(Effects.PaletteMain2, paletteColors[1]);
+            memAPI.WriteU16(Effects.PaletteMain3, paletteColors[2]);
+            memAPI.WriteU16(Effects.PaletteMain4, paletteColors[3]);
+            memAPI.WriteU16(Effects.PaletteMain5, paletteColors[4]);
+            memAPI.WriteU16(Effects.PaletteDark, darkColor);
+        }
+
+        public void SetAlucardLiner(uint[] linerColors)
+        {
+            if (linerColors.Length != 4) return;
+            memAPI.WriteU16(Effects.Liner1, linerColors[0]);
+            memAPI.WriteU16(Effects.Liner2, linerColors[1]);
+            memAPI.WriteU16(Effects.Liner3, linerColors[2]);
+            memAPI.WriteU16(Effects.Liner4, linerColors[3]);
+        }
     }
 }

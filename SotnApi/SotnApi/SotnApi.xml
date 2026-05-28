@@ -379,6 +379,11 @@
             Randomizer all bosses goal.
             </returns>
         </member>
+        <member name="P:SotnApi.Interfaces.IGameApi.SaveFileName">
+            <summary>
+            Returns the name of the current save file.
+            </summary>
+        </member>
         <member name="M:SotnApi.Interfaces.IGameApi.EquipMenuOpen">
             <summary>
             Checks if the item equip menu is currently open.

@@ -7,5 +7,7 @@
         public const uint MenuOpen = 0x1;
         public const uint Loading = 0x88;
         public const uint Transition = 0x3;
+        public const uint Cinematic = 0x5;
+        public const uint LoadingSaveFile = 0x4;
     }
 }

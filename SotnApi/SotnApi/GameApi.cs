@@ -389,6 +389,16 @@ namespace SotnApi
             }
         }
 
+        public string SaveFileName
+        {
+            get
+            {
+                // The name is stored in 8 bytes
+                byte[] bytes = (byte[])memAPI.ReadByteRange(Game.SaveFileName, 8);
+                string name = Encoding.ASCII.GetString(bytes).TrimEnd('\0', ' ');
+                return name;
+            }
+        }
         public bool EquipMenuOpen()
         {
             return memAPI.ReadByte(Game.EquipMenuOpen) > 0 && CurrentMainMenuCategory == MainMenuCategory.Equip;

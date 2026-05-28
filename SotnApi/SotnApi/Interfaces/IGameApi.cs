@@ -122,6 +122,10 @@ namespace SotnApi.Interfaces
         /// </returns>
         bool AllBossesGoal { get; }
         /// <summary>
+        /// Returns the name of the current save file.
+        /// </summary>
+        string SaveFileName { get; }
+        /// <summary>
         /// Checks if the item equip menu is currently open.
         /// </summary>
         bool EquipMenuOpen();

@@ -168,5 +168,7 @@ namespace SotnApi.Interfaces
         void ForceLibraryCard();
         void ActivateStopwatch();
         void ActivatePotion(Potion potion);
+        public void SetAlucardPalette(uint[] paletteColors, uint darkColor);
+        public void SetAlucardLiner(uint[] linerColors);
     }
 }
